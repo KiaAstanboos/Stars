@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💕 A Special Question 💕</title>
+    
+    <!-- Google Fonts - Elegant romantic font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Great+Vibes&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ============================================
+         OVERLAY - Click to Enter (handles autoplay)
+         ============================================ -->
+    <div id="overlay">
+        <div class="overlay-content">
+            <div class="heart-icon">💌</div>
+            <h2>You have a special letter...</h2>
+            <p class="overlay-hint">(don't answer quickly)</p>
+            <button id="enter-btn">Open Letter</button>
+        </div>
+    </div>
+
+    <!-- ============================================
+         MAIN CONTENT
+         ============================================ -->
+    <main id="main-content">
+        <!-- Canvas for shooting stars animation -->
+        <canvas id="stars-canvas"></canvas>
+
+        <!-- Main Question Text -->
+        <h1 id="main-text">Will you be my valentine?</h1>
+
+        <!-- Lyrics Display Area -->
+        <div id="lyrics-container">
+            <p id="lyrics-text"></p>
+        </div>
+
+        <!-- Yes/No Buttons (separate wrappers) -->
+        <div id="yes-wrapper">
+            <button id="yes-btn">Yes 💕</button>
+        </div>
+        <div id="no-wrapper">
+            <button id="no-btn">No</button>
+        </div>
+
+        <!-- Video Container (hidden initially) -->
+        <div id="video-container">
+            <!-- ============================================
+                 VIDEO FILE: Change "YES.mp4" to your video filename
+                 ============================================ -->
+            <video id="success-video" muted playsinline loop>
+                <source src="YES.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </main>
+
+    <!-- ============================================
+         AUDIO: Change "music.mp3" to your audio filename
+         Song: "Unintended" by Muse
+         ============================================ -->
+    <audio id="bg-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
